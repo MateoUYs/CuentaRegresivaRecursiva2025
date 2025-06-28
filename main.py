@@ -9,6 +9,9 @@ def main():
         if numero < 0:
             print("Por favor, ingrese un número positivo.")
         else:
+            if numero > 1000:
+                print("⚠️ El número es muy grande. Podría causar un error por demasiada recursión.")
+                return  # Evita seguir si es muy grande
             print("\n🔽 Iniciando cuenta regresiva:\n")
             contador.cuenta_regresiva(numero)
     except ValueError:
